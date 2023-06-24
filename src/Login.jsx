@@ -32,6 +32,14 @@ function Login() {
       }
     });
   }
+  function handleClick(event) {
+    event.preventDefault();
+    setContact({
+      fName: "",
+      lName: "",
+      email: "",
+    });
+  }
 
   return (
     <div className="Login">
@@ -59,7 +67,7 @@ function Login() {
             value={contact.email}
             placeholder="Email"
           />
-          <button>Submit</button>
+          <button onClick={handleClick}>Submit</button>
         </form>
       </div>
     </div>
